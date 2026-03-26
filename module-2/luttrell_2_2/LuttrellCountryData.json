@@ -1,0 +1,15 @@
+[
+  { "country": "Hungary", "cuisine": 4, "history": 5, "cost": 4 },
+  { "country": "Italy", "cuisine": 5, "history": 5, "cost": 2 },
+  { "country": "Turkey", "cuisine": 5, "history": 5, "cost": 4 },
+  { "country": "Bahrain", "cuisine": 3, "history": 3, "cost": 2 },
+  { "country": "Canada", "cuisine": 3, "history": 3, "cost": 3 },
+  { "country": "Great Britain", "cuisine": 3, "history": 5, "cost": 2 },
+  { "country": "France", "cuisine": 5, "history": 5, "cost": 2 },
+  { "country": "Luxembourg", "cuisine": 3, "history": 4, "cost": 1 },
+  { "country": "Greece", "cuisine": 5, "history": 5, "cost": 3 },
+  { "country": "Latvia", "cuisine": 3, "history": 4, "cost": 4 },
+  { "country": "Germany", "cuisine": 4, "history": 5, "cost": 3 },
+  { "country": "Belgium", "cuisine": 4, "history": 4, "cost": 2 },
+  { "country": "Czech Republic", "cuisine": 4, "history": 5, "cost": 4 }
+]
