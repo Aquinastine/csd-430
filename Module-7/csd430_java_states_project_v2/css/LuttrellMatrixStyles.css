@@ -1,0 +1,241 @@
+/* Luttrell Matrix Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 40px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    background: #05070b;
+    color: #111;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at center, rgba(20, 60, 20, 0.18) 0%, rgba(0, 0, 0, 0.92) 70%),
+        linear-gradient(to bottom, #020303 0%, #05070b 100%);
+    z-index: -3;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    opacity: 0.22;
+    background-image:
+        repeating-linear-gradient(
+            to right,
+            rgba(0, 255, 120, 0.00) 0px,
+            rgba(0, 255, 120, 0.00) 16px,
+            rgba(0, 255, 120, 0.22) 17px,
+            rgba(0, 255, 120, 0.00) 18px,
+            rgba(0, 255, 120, 0.00) 34px
+        ),
+        repeating-linear-gradient(
+            to bottom,
+            rgba(0, 255, 120, 0.00) 0px,
+            rgba(0, 255, 120, 0.00) 10px,
+            rgba(0, 255, 120, 0.18) 11px,
+            rgba(0, 255, 120, 0.00) 12px,
+            rgba(0, 255, 120, 0.00) 24px
+        );
+    animation: matrixShift 14s linear infinite;
+}
+
+.matrix-rain {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.12;
+    background-image:
+        repeating-linear-gradient(
+            to bottom,
+            rgba(180, 255, 180, 0.0) 0px,
+            rgba(180, 255, 180, 0.0) 8px,
+            rgba(0, 255, 102, 0.75) 9px,
+            rgba(180, 255, 180, 0.0) 10px,
+            rgba(180, 255, 180, 0.0) 20px
+        );
+    background-size: 42px 220px;
+    animation: rainFall 8s linear infinite;
+}
+
+.page-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(0, 255, 100, 0.18);
+    backdrop-filter: blur(2px);
+    margin-bottom: 25px;
+}
+
+.course-name {
+    font-size: 0.9rem;
+    color: #007a3d;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 2rem;
+    margin: 0 0 8px 0;
+    color: #1a1a1a;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #444;
+    margin: 0 0 8px 0;
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+.muted {
+    color: #5c6770;
+}
+
+.button-row {
+    margin-top: 20px;
+}
+
+.button-row form {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background: #007a3d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #00aa55;
+}
+
+button.danger {
+    background: #9b1c31;
+}
+
+button.danger:hover {
+    background: #c92a3f;
+}
+
+select,
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    max-width: 420px;
+    padding: 10px 12px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-row {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #222;
+}
+
+.message {
+    padding: 12px;
+    background: #eefcf2;
+    border-left: 4px solid #007a3d;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #101820;
+    color: #7CFC98;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+tr:hover {
+    background: #eefcf2;
+}
+
+.footer-date {
+    margin: 0;
+    color: #111;
+}
+
+.footer-name {
+    font-weight: bold;
+    margin: 0;
+    color: #111;
+}
+
+@keyframes matrixShift {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(24px);
+    }
+}
+
+@keyframes rainFall {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 220px;
+    }
+}
+
+.hidden-card {
+    display: none;
+}
